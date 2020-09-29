@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        
+    </ul>
+
+    <script>
+        let ul=document.querySelector('ul')
+
+        let str=''
+
+        let json = [
+        {
+            banji:"1910E",
+            name:"刘备",
+            age:20,
+            like:"跳舞"
+        },
+        {
+            banji:"1910E",
+            name:"张飞",
+            age:18,
+            like:"打人"
+        },
+        {
+            banji:"1910E",
+            name:"关羽",
+            age:19,
+            like:"喝酒"
+        }
+    ]
+
+    for(let i=0;i<json.length;i++){
+        str+=`
+            班级:<li><span>${json[i].banji}</span></li>
+            名字:<li><span>${json[i].name}</span></li>
+            年龄:<li><span>${json[i].age}</span></li>
+            爱好:<li><span>${json[i].like}</span></li>
+
+        `
+    }
+
+    ul.innerHTML=str
+    
+
+
+
+    </script>
+</body>
+</html>
